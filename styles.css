@@ -1,0 +1,50 @@
+* {
+    background-color: rgb(25, 25, 49);
+    text-align: center;
+}
+.header {
+    color: white;
+    text-align: center;
+}
+#coin-title, #coin-price, .coin-price, #coin-information{
+    color: white;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#coins {
+  max-width: 800px;
+  gap: 10px;
+}
+.coin {
+    height: 90px;
+    width: 90px;
+}
+.info {
+    font-size: 30px;
+}
+#search, #input {
+    color: white;
+}
+#form {
+    border-radius: 10px;
+}
+@media screen {
+    
+}
+.hidden {
+    display: none;
+}
+@media screen and (max-width: 1000px) {
+    .coin {
+        height: 50px;
+        width: 50px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+  }
