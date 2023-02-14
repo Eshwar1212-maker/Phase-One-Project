@@ -8,7 +8,8 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
             coinImage.src = coin.image
             let mainCoins = document.getElementById("coins");
             mainCoins.append(coinImage)
-            
+
+ 
 
             coinImage.addEventListener('click', () => {
                 console.log("Coin name is " + coin.name);
@@ -19,21 +20,18 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
                 document.getElementById("coin-supply").textContent = "Coin Max Supply: " + coin.max_supply
                 document.getElementById("coin-volume").textContent = "Coin Volume: " + coin.total_volume
             })
-
             let form = document.getElementById("form")
             form.addEventListener("submit", (e) => {
                 e.preventDefault()
                 let inputSearchValue = document.getElementById("input").value
                 if (inputSearchValue.toLowerCase() !== coin.name.toLowerCase()) {
-                    console.log(data);
                     coinImage.classList.add("hidden")
                 }
             })
         })
-    })
-const search = (coin) => {
 
-}
+    })
+    
 //Dark Mode Toggle NEED TO MERGE//
 const icon = document.getElementById("color-mode")
 icon.onclick = function(){
@@ -45,3 +43,4 @@ icon.onclick = function(){
         icon.src = "dark-theme-icon/sun.png";
     }
 }
+    })
