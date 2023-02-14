@@ -27,12 +27,3 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
             })
         })
     })
-let toggleButton = document.getElementById("toggle-button");
-toggleButton.addEventListener("click", () => {
-    let body = document.querySelector("*")
-    let coinImage = document.querySelector("")
-
-    console.log(body);
-    body.classList.add("dark");
-})
-
