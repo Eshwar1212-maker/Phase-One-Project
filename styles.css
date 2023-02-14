@@ -2,6 +2,9 @@
     background-color: rgb(25, 25, 49);
     text-align: center;
 }
+.stupid {
+    color: rgb(25, 25, 49);
+}
 .header {
     color: white;
     text-align: center;
@@ -25,8 +28,29 @@
 .info {
     font-size: 30px;
 }
+.toggle {
+    color: white;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.dark {
+    background-color: white
+}
 #search, #input {
     color: white;
+    transition: 0.5s ease-in;
+}
+#input {
+    width: 300px;
+    border-radius: 20px;
+    border: 3px rgb(148, 42, 42);
+}
+#search:hover {
+    background-color: beige;
+    color: black;
 }
 #form {
     border-radius: 10px;
