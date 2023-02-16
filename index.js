@@ -8,6 +8,9 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
             coinImage.src = coin.image
             let mainCoins = document.getElementById("coins");
             mainCoins.append(coinImage)
+
+ 
+
             coinImage.addEventListener('click', () => {
                 console.log("Coin name is " + coin.name);
                 console.log(coin.current_price);
@@ -26,4 +29,18 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
                 }
             })
         })
+
+    })
+    
+//Dark Mode Toggle NEED TO MERGE//
+const icon = document.getElementById("color-mode")
+icon.onclick = function(){
+    document.body.classList.toggle("dark-theme")
+    if(document.body.classList.contains("dark-theme")){
+        icon.src = "dark-theme-icon/moon.png";
+        console.log(icon.src)
+    } else {
+        icon.src = "dark-theme-icon/sun.png";
+    }
+}
     })

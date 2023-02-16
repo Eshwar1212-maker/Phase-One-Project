@@ -1,3 +1,6 @@
+
+* {
+    background-color: var(--primary-color); /*merge*/
 body {
     background-color: rgb(25, 25, 49);
     text-align: center;
@@ -6,11 +9,11 @@ body {
     color: rgb(25, 25, 49);
 }
 .header {
-    color: white;
+    color: var(--secondary-color); /*Merge*/
     text-align: center;
 }
 #coin-title, #coin-price, .coin-price, #coin-information{
-    color: white;
+    color: var(--secondary-color); /*Merge*/
 }
 .container {
     display: flex;
@@ -46,6 +49,9 @@ body {
     
 }
 #search, #input {
+
+    color: var(--secondary-color); /*Merge*/
+=======
     color: white;
     transition: 0.5s ease-in;
 }
@@ -77,4 +83,41 @@ body {
         flex-direction: column;
     }
     
+  }
+/*NEED TO MERGE BELOW*/
+  #color-mode {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  nav ul{
+    text-align: right;
+  }
+
+  :root{
+   --primary-color: #191931;
+    --secondary-color: #fff; 
+  }
+.dark-theme {    
+    --primary-color: #fff;
+    --secondary-color: #191931;
+    
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .button {
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--primary-color);
+    width: 200px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
   }
