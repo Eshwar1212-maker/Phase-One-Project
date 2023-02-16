@@ -1,6 +1,12 @@
+
 * {
     background-color: var(--primary-color); /*merge*/
+body {
+    background-color: rgb(25, 25, 49);
     text-align: center;
+}
+.stupid {
+    color: rgb(25, 25, 49);
 }
 .header {
     color: var(--secondary-color); /*Merge*/
@@ -13,7 +19,6 @@
     display: flex;
     justify-content: center;
 }
-
 #coins {
   max-width: 800px;
   gap: 10px;
@@ -22,11 +27,42 @@
     height: 90px;
     width: 90px;
 }
+.main-body {
+    background-color: white;
+    color: black;
+}
 .info {
     font-size: 30px;
 }
+.toggle {
+    color: white;
+
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.dark {
+    background-color: white;
+    color: black;
+    
+}
 #search, #input {
+
     color: var(--secondary-color); /*Merge*/
+=======
+    color: white;
+    transition: 0.5s ease-in;
+}
+#input {
+    width: 300px;
+    border-radius: 20px;
+    border: 3px rgb(148, 42, 42);
+}
+#search:hover {
+    background-color: beige;
+    color: black;
 }
 #form {
     border-radius: 10px;
