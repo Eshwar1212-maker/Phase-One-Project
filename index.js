@@ -5,9 +5,15 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
         data.forEach((coin) => {
             let coinImage = document.createElement("img")
             coinImage.className = 'coin'
+            let coinInformation = document.getElementsByClassName("coin-information-hidden")
             coinImage.src = coin.image
             let mainCoins = document.getElementById("coins");
             mainCoins.append(coinImage)
+            console.log(coinInformation.innerHTML);
+            if (coinInformation.textContent === "") {
+                coinInformation.classList.add("coin-information-hidden")
+            }
+
             coinImage.addEventListener('click', () => {
                 console.log("Coin name is " + coin.name);
                 console.log(coin.current_price);
@@ -16,6 +22,11 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
                 document.getElementById("market-cap").textContent = "Coin Market Cap: " + coin.market_cap
                 document.getElementById("coin-supply").textContent = "Coin Max Supply: " + coin.max_supply
                 document.getElementById("coin-volume").textContent = "Coin Volume: " + coin.total_volume
+                document.getElementById("low-24").textContent = "Low 24: " + coin.low_24h;
+                document.getElementById("price-change-24").textContent = "Daily change: " + coin.price_change_24h + ", " + coin.price_change_percentage_24h + "%"
+
+
+
             })
             let form = document.getElementById("form")
             form.addEventListener("submit", (e) => {
@@ -27,3 +38,17 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
             })
         })
     })
+
+
+//Dark Mode Toggle NEED TO MERGE//
+const icon = document.getElementById("color-mode")
+icon.addEventListener('click', () => {
+    document.body.classList.toggle("dark-theme")
+    if (document.body.classList.contains("dark-theme")) {
+        icon.src = "dark-theme-icon/moon.png"
+        console.log(icon.src)
+    } else {
+        icon.src = "dark-theme-icon/sun.png"
+    }
+})
+

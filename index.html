@@ -8,32 +8,48 @@
     <title>Coin Gecko</title>
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico">
+
 </head>
 
 <body id="body">
     <header class="header-container">
-        <h1 class="stupid"></h1>
         <h1 class="header">Coin Gecko</h1>
-        <button id="toggle-button" class="toggle">Toggle Mode</button>
+        <img src="dark-theme-icon/sun.png" id="color-mode"></img>
 
     </header>
     <br /><br />
     <form id="form">
-        <input id="input" type="search" id="query" name="q" placeholder="Search...">
-        <button id="search">Search</button>
+        <div class="form-input">
+            <input style="background-color:white; 
+            border: solid 1px #6E6E6E;
+            height: 30px; 
+            font-size:18px; 
+            vertical-align:9px;color:#bbb" id="input" type="search" id="query" name="q" placeholder="Search...">
+            <button id="search">Search</button>
+        </div>
+
     </form>
     <br /><br />
     <div class="container">
         <div id="coins">
         </div>
-        <div id="coin-information">
-            <h1 id="coin-title"></h1>
-            <p class="info"><span id="coin-price"></span></p>
-            <p class="info"><span id="coin-high"></span></p>
-            <p class="info"><span id="coin-low"></span></p>
-            <p class="info"> <span id="market-cap"></span></p>
-            <p class="info"><span id="coin-supply"></span></p>
-            <p class="info"><span id="coin-volume"></span></p>
+        <div id="">
+            <div class="coin-information">
+                <h1 id="coin-title"></h1>
+                <p class="info"><span id="coin-price"></span></p>
+                <p class="info"><span id="coin-high"></span></p>
+                <p class="info"><span id="coin-low"></span></p>
+                <p class="info"> <span id="market-cap"></span></p>
+                <p class="info"><span id="coin-supply"></span></p>
+                <p class="info"><span id="coin-volume"></span></p>
+                <p class="info"><span id="low-24"></span></p>
+                <p class="info"><span id="price-change-24"></span></p>
+
+
+
+            </div>
+
 
         </div>
     </div>

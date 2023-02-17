@@ -1,39 +1,66 @@
 body {
-    background-color: rgb(25, 25, 49);
+    background-color: var(--primary-color);
     text-align: center;
 }
-.stupid {
-    color: rgb(25, 25, 49);
-}
 .header {
-    color: white;
+    color: var(--secondary-color);
     text-align: center;
 }
 #coin-title, #coin-price, .coin-price, #coin-information{
-    color: white;
+    color: var(--secondary-color); 
+}
+header {
+    padding: 30px;
 }
 .container {
     display: flex;
+    justify-content: center;
+}
+#color-mode {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    padding: 30px;
+}
+.form-input {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 #coins {
   max-width: 800px;
   gap: 10px;
 }
+#search {
+    color: black;
+    background-color: black;
+}
 .coin {
     height: 90px;
     width: 90px;
+    padding: 10px;
+    margin: 10px;
+    transition: transform .7s ease-in-out;
+}
+.coin:hover {
+    padding: 7px;
+    border: 2px solid rgb(167, 60, 171);
+    transform: rotateY(360deg);
 }
 .main-body {
     background-color: white;
     color: black;
 }
 .info {
-    font-size: 30px;
+    font-size: 20px;
 }
 .toggle {
     color: white;
+    display: none;
 
+}
+input {
+    color: black; 
 }
 .header-container {
     display: flex;
@@ -43,8 +70,17 @@ body {
 .dark {
     background-color: white;
     color: black;
-    
 }
+:root{
+    --primary-color: #191931;
+    --secondary-color: #fff; 
+}
+.dark-theme{
+    --primary-color: #fff; 
+    --secondary-color: #191931; 
+}
+
+
 #search, #input {
     color: white;
     transition: 0.5s ease-in;
@@ -58,6 +94,22 @@ body {
     background-color: beige;
     color: black;
 }
+.coin-information{
+    justify-content: center;
+    border: 1px solid var(--primary-color);
+    margin: auto;
+    width: fit-content;
+    padding: 4px;
+    background-color: rgb(53, 49, 49);
+    color: white; 
+    border-radius: 15px;
+}
+
+
+.coin-information-hidden{
+    display: none;
+}
+
 #form {
     border-radius: 10px;
 }
