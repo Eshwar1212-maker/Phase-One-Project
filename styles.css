@@ -1,27 +1,17 @@
 
 * {
     background-color: var(--primary-color); /*merge*/
+}
 body {
     background-color: var(--primary-color);
     text-align: center;
 }
 .header {
-<<<<<<< HEAD
-    color: var(--secondary-color);
-    text-align: center;
-}
-#coin-title, #coin-price, .coin-price, #coin-information{
-    color: var(--secondary-color); 
-}
-header {
-    padding: 30px;
-=======
     color: var(--secondary-color); /*Merge*/
     text-align: center;
 }
 #coin-title, #coin-price, .coin-price, #coin-information{
     color: var(--secondary-color); /*Merge*/
->>>>>>> 502681de8846321fb3032d361f5f77ad68bdc0b6
 }
 .container {
     display: flex;
@@ -95,7 +85,6 @@ input {
 #search, #input {
 
     color: var(--secondary-color); /*Merge*/
-=======
     color: white;
     transition: 0.5s ease-in;
 }

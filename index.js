@@ -9,15 +9,8 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
             coinImage.src = coin.image
             let mainCoins = document.getElementById("coins");
             mainCoins.append(coinImage)
-<<<<<<< HEAD
-            console.log(coinInformation.innerHTML);
-            if (coinInformation.textContent === "") {
-                coinInformation.classList.add("coin-information-hidden")
-            }
-=======
 
- 
->>>>>>> 502681de8846321fb3032d361f5f77ad68bdc0b6
+
 
             coinImage.addEventListener('click', () => {
                 console.log("Coin name is " + coin.name);
@@ -42,36 +35,18 @@ fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=mark
                 }
             })
         })
-<<<<<<< HEAD
-    })
 
+    })
 
 //Dark Mode Toggle NEED TO MERGE//
 const icon = document.getElementById("color-mode")
-icon.addEventListener('click', () => {
+icon.onclick = function () {
     document.body.classList.toggle("dark-theme")
     if (document.body.classList.contains("dark-theme")) {
-        icon.src = "dark-theme-icon/moon.png"
-        console.log(icon.src)
-    } else {
-        icon.src = "dark-theme-icon/sun.png"
-    }
-})
-
-=======
-
-    })
-    
-//Dark Mode Toggle NEED TO MERGE//
-const icon = document.getElementById("color-mode")
-icon.onclick = function(){
-    document.body.classList.toggle("dark-theme")
-    if(document.body.classList.contains("dark-theme")){
         icon.src = "dark-theme-icon/moon.png";
         console.log(icon.src)
     } else {
         icon.src = "dark-theme-icon/sun.png";
     }
 }
-    })
->>>>>>> 502681de8846321fb3032d361f5f77ad68bdc0b6
+
